@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+
+
+
+<script type="text/javascript">
+			var num1 = 20;
+
+		function Obj1(a,b){
+			this.num1 = a;
+			this.num2 = b;
+			console.log(this)
+		}
+		function Obj2(a,b,c){
+			this.a = a;
+			this.b = b;
+			this.c = c;
+		}
+
+		var obj2 = new Obj2(10,20,30)
+
+		Obj1.call(obj2,80,90)
+
+		var bindObj = Obj1.bind(obj2,200,300)
+		bindObj();
+
+		Obj1.apply(obj2, ['digital','lync'])
+
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
